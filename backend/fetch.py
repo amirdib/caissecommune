@@ -5,7 +5,7 @@ import re
 import numpy as np
 import json
 
-urls = ['https://www.lepotcommun.fr/pot/qwgkeart', 'https://www.leetchi.com/fr/Cagnotte/31978353/a8a95db7', 'https://www.lepotcommun.fr/pot/w6md18bt']
+urls = ['https://www.lepotcommun.fr/pot/qwgkeart', 'https://www.leetchi.com/fr/Cagnotte/31978353/a8a95db7', 'https://www.lepotcommun.fr/pot/w6md18bt', 'https://www.lepotcommun.fr/pot/69p7sald', 'https://www.lepotcommun.fr/pot/solidarite-financiere']
 
 # for loop
 data = []
