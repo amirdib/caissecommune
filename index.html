@@ -10,9 +10,70 @@
         <script src="js/modernizr.custom.js"></script>
 
         <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+        <link rel="stylesheet" href="node_modules/bulma/css/style.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
+        <nav class="navbar  is-fixed-bottom is-primary" role="navigation" aria-label="main navigation">
+
+            <div class="navbar-start">
+
+                <div class="navbar-item">
+
+
+                    <div class="field is-grouped">
+
+                       <p class="control">
+                            <a class="button is-primary is-large">
+                                <span class="icon">
+                                    <i class="fas fa-filter"></i>
+                                </span>
+                            </a>
+                        </p>
+
+                        <p class="control">
+                            <a class="button is-primary is-large" onclick="filter('sncf')" id="sncfFilter">
+                                <span>SNCF</span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary is-large" onclick="filter('poste')">
+                                <span>La Poste</span>
+                            </a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-primary is-large" onclick="filter('ehpad')">
+                                <span>EPHAD</span>
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control is-primary">
+                            <a class="bd-tw-button button is-large" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="#">
+                                <span class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                                <span>
+                                    Tweet
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+
         <section class="section" id="presentation">
             <div class="container">
 
@@ -26,93 +87,142 @@
                     Lorem ipsum dolor sit amet consectetur adipiscing elit ornare platea, vel natoque et malesuada litora cras nostra nibh suscipit, aptent magna consequat tempor massa sagittis aliquet blandit. Tincidunt aliquam sed eros purus sapien libero dictum dictumst, euismod conubia integer ornare mus quisque faucibus, mi neque suscipit rutrum facilisis lacus imperdiet. Faucibus magna cubilia mi est vitae arcu gravida pretium convallis tellus sapien ligula, platea et vivamus magnis ac donec fringilla scelerisque mollis posuere cras. Urna nisi at augue fermentum habitasse porta tincidunt netus litora tellus viverra luctus, etiam sociosqu ante nec vehicula mauris nascetur diam aliquet eleifend nullam mollis et, molestie nulla consequat vel ut a taciti lacinia neque ac fusce. Cursus tristique et montes convallis ante at senectus porta auctor, sapien diam fringilla vehicula varius vulputate sociis ad sodales, praesent justo bibendum natoque risus ligula eu ac.
                 </p>
 
-                <br><br>
+                <br>
+                <br>
+
                 <div class="columns is-centered">
-                    <a class="button is-danger is-rounded is-large" href="#actions">Contribuer</a>
+                    <div class="column is-6 is-offset-1">
+                        <h1 class="title is-1">
+                            <p class="is-centered has-text-centered" id="contributionTotal"></p>
+                        </h1>
+                        <p class="has-text-centered">
+                            <a class="button is-danger is-rounded is-large" href="#actions">Contribuer</a>
+                        </p>
+                    </div>
+
                 </div>
 
             </div>
         </section>
-    <section class="section" id="reformes">
-        <div class="container">
-            <h1 class="title">
-                Les raisins de la colère
-            </h1>
-            <ul id="og-grid" class="og-grid">
-                <li>
-                    <a href="#" data-largesrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/640px-Logo_SNCF_2011.svg.png" data-title="Le combat cheminot" data-description="Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.">
-                        <img src="https://www.creads.fr/blog/wp-content/uploads/2016/11/sncf_logo1947-191x208.png" alt="img02" height="230" width="230"/>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" data-largesrc="https://www.handicapinfos.com/mediatheque/photos/id8576_photo.gif" data-title="L'appel des aides soignants" data-description="Altera sententia est, quae definit amicitiam paribus officiis ac voluntatibus. Hoc quidem est nimis exigue et exiliter ad calculos vocare amicitiam, ut par sit ratio acceptorum et datorum. Divitior mihi et affluentior videtur esse vera amicitia nec observare restricte, ne plus reddat quam acceperit; neque enim verendum est, ne quid excidat, aut ne quid in terram defluat, aut ne plus aequo quid in amicitiam congeratur.">
-                        <img src="https://www.handicapinfos.com/mediatheque/photos/id8576_photo.gif" alt="ephad"/>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="section" id="actions">
-        <div class="container">
-            <h1 class="title">
-                Actions
-            </h1>
+        <section class="section" id="reformes">
+            <div class="container">
+                <h1 class="title">
+                    Les caisses de solidarité
+                </h1>
 
-            <div class="tile is-ancestor has-text-centered">
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Contribuer</p>
-                        <figure class="image is-large">
-                            <a href="https://www.lepotcommun.fr/pot/7jxoagyx">
-                                <img src="https://www.lepotcommun.fr/static/img/svg/solidary-kitty-logo-custom.svg?h=1444492326">
-                            </a>
-                        </figure>
-                    </article>
+                <div class="tile is-ancestor has-text-centered">
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification sncf">
+                            <p class="title">Caisse 1</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification sncf">
+                            <p class="title">Caisse 2</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification poste">
+                            <p class="title">Caisse 3</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
                 </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Passer le message</p>
-                        <p class="subtitle"></p>
-                    </article>
+
+                <div class="tile is-ancestor has-text-centered">
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification poste">
+                            <p class="title">Caisse 4</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification ehpad">
+                            <p class="title">Caisse 5</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="tile is-parent">
+                        <article class="tile is-child notification ehpad">
+                            <p class="title">Caisse 6</p>
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/640x480.png">
+                            </figure>
+                        </article>
+                    </div>
                 </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child box">
-                        <p class="title">Agir</p>
-                        <p class="subtitle"></p>
-                    </article>
-                </div>
+
+
+
+
+
             </div>
+        </section>
+        <section class="section" id="actions">
+            <div class="container">
+                <h1 class="title">
+                    Actions
+                </h1>
 
-        </div>
-    </section>
-    <section class="section" id="faq">
-        <div class="container">
-            <h1 class="title">
-                F.A.Q.
-            </h1>
-            <ol>
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>Vestibulum auctor dapibus neque.</li>
-            </ol>
-        </div>
-    </section>
-    <section class="section" id="contact">
-        <div class="container">
-            <h1 class="title">
-                Contact
-            </h1>
 
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        </div>
-    </section>
+            </div>
+        </section>
+        <section class="section" id="faq">
+            <div class="container">
+                <h1 class="title">
+                    F.A.Q.
+                </h1>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                    <li>Aliquam tincidunt mauris eu risus.</li>
+                    <li>Vestibulum auctor dapibus neque.</li>
+                </ol>
+            </div>
+        </section>
+        <section class="section" id="contact">
+            <div class="container">
+                <h1 class="title">
+                    Contact
+                </h1>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/grid.js"></script>
-    <script>
-        $(function() {
-            Grid.init();
-        });
-    </script>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+            </div>
+        </section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="js/grid.js"></script>
+        <script>
+            function filter(e){
+                //debugger;
+                if ($('.' + e).attr('class').match('is-danger') != null){
+                    $('.' + e).removeClass( "is-danger" );
+                }
+                else{
+                $('.' + e).addClass( "is-danger" );
+                }
+            }
+
+            $(function() {
+                Grid.init();
+            });
+
+            $.getJSON("backend/data.json", (data) => $("#contributionTotal").html(Math.round(data.slice(-1)[0].sums[1]) + ' &euro; récoltés'))
+        </script>
     </body>
 </html>
