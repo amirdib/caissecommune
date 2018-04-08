@@ -4,7 +4,7 @@
   "description": "Site internet regroupant informations sur les grèves et constitution d'une caisse commune",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-style": "node-sass --output-style expanded --source-map true css/style.sass css/style.css"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   "homepage": "https://github.com/amirdib/caissecommune#readme",
   "dependencies": {
     "bulma": "^0.6.2",
+    "node-sass": "^4.8.3",
     "npm": "^5.7.1"
   }
 }
